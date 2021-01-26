@@ -110,7 +110,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -130,7 +130,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -146,7 +146,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -165,7 +165,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -181,7 +181,7 @@
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -798,7 +798,7 @@ obj/item/storage/box/stingbangs
 	if(isplasmaman(loc))
 		new /obj/item/tank/internals/plasmaman/belt(src)
 		return
-		
+
 	if(isvox(loc)) // Skyrat change: Nitrogen internals for Vox
 		new /obj/item/tank/internals/nitrogen/belt(src)
 		return
@@ -1472,3 +1472,31 @@ obj/item/storage/box/stingbangs
 	for(var/i in 1 to 5)
 		new /obj/item/grenade/stingbang(src)
 //
+
+/obj/item/storage/box/illegal_stuff
+	name = "suspicious box"
+	icon_state = "syndiebox"
+
+/obj/item/storage/box/illegal_stuff/PopulateContents()
+	for(var/i in 1 to 5) //basically, literally contraband crate but box and also some minor additions for horny people. muh arpee
+		var/randomIllegal = pick(/obj/item/poster/random_contraband,
+					/obj/item/reagent_containers/food/snacks/grown/cannabis,
+					/obj/item/reagent_containers/food/snacks/grown/cannabis/rainbow,
+					/obj/item/reagent_containers/food/snacks/grown/cannabis/white,
+					/obj/item/storage/pill_bottle/zoom,
+					/obj/item/storage/pill_bottle/happy,
+					/obj/item/storage/pill_bottle/lsd,
+					/obj/item/storage/pill_bottle/aranesp,
+					/obj/item/storage/pill_bottle/stimulant,
+					/obj/item/toy/cards/deck/syndicate,
+					/obj/item/reagent_containers/food/drinks/bottle/absinthe,
+					/obj/item/storage/fancy/cigarettes/cigpack_syndicate,
+					/obj/item/storage/fancy/cigarettes/cigpack_shadyjims,
+					/obj/item/clothing/neck/necklace/dope,
+					/obj/item/vending_refill/donksoft,
+					/obj/item/reagent_containers/glass/bottle/hexacrocin,
+					/obj/item/reagent_containers/glass/bottle/hexacamphor,
+					/obj/item/storage/pill_bottle/penis_enlargement,
+					/obj/item/storage/pill_bottle/breast_enlargement,
+					/obj/item/storage/bag/ammo)
+		new randomIllegal(src)

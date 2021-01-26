@@ -172,6 +172,18 @@ datum/gang_item/clothing/shades //Addition: Why not have cool shades on a gang m
 	cost = 5
 	item_path = /obj/item/switchblade
 
+/datum/gang_item/weapon/baseball
+	name = "Baseball Bat"
+	id = "baseball"
+	cost = 10
+	item_path = /obj/item/melee/baseball_bat
+
+/datum/gang_item/weapon/skateboard
+	name = "Cool Skateboard"
+	id = "skateboard"
+	cost = 15
+	item_path = /obj/item/melee/skateboard/pro
+
 /datum/gang_item/weapon/surplus //For when a gang boss is extra broke or cheap.
 	name = "Surplus Rifle"
 	id = "surplus"
@@ -210,16 +222,16 @@ datum/gang_item/clothing/shades //Addition: Why not have cool shades on a gang m
 	cost = 10
 	item_path = /obj/item/ammo_box/magazine/m10mm
 
-/datum/gang_item/weapon/sniper
-	name = "Black Market .50cal Sniper Rifle"
-	id = "sniper"
-	cost = 35
-	item_path = /obj/item/gun/ballistic/automatic/sniper_rifle
+/datum/gang_item/weapon/tommy
+	name = "Black Market 9mm Tommy Gun"
+	id = "tommy"
+	cost = 75
+	item_path = /obj/item/gun/ballistic/automatic/tommygun
 
-/datum/gang_item/weapon/ammo/sniper_ammo
-	name = "Smuggled .50cal Sniper Rounds"
-	id = "sniper_ammo"
-	cost = 15
+/datum/gang_item/weapon/ammo/tommy_ammo
+	name = "Smuggled 9mm Tommy Drum"
+	id = "tommy_ammo"
+	cost = 40
 	item_path = /obj/item/ammo_box/magazine/sniper_rounds
 
 /*/datum/gang_item/weapon/ammo/sleeper_ammo	//no. absolutely no.
@@ -228,16 +240,17 @@ datum/gang_item/clothing/shades //Addition: Why not have cool shades on a gang m
 	cost = 15	//who the fuck thought a ONE-HIT K.O. for 15 gbp IN AN ENVIRONMENT WHERE WE'RE GETTING RID OF HARDSTUNS is a GOOD IDEA
 	item_path = /obj/item/ammo_box/magazine/sniper_rounds/soporific*/
 
-/datum/gang_item/weapon/machinegun
-	name = "Mounted Machine Gun"
-	id = "MG"
-	cost = 45
-	item_path = /obj/machinery/manned_turret
-	spawn_msg = "<span class='notice'>The mounted machine gun features enhanced responsiveness. Hold down on the trigger while firing to control where you're shooting.</span>"
+/datum/gang_item/weapon/mosin
+	name = "Mosin Nagant"
+	id = "mosin"
+	cost = 30
+	item_path = /obj/item/gun/ballistic/shotgun/boltaction
 
-/datum/gang_item/weapon/machinegun/spawn_item(mob/living/carbon/user, obj/item/device/gangtool/gangtool)
-	new item_path(user.loc)
-	to_chat(user, spawn_msg)
+/datum/gang_item/weapon/ammo/mosin_ammo
+	name = "7.62mm Clip"
+	id = "mosin_ammo"
+	cost = 10
+	item_path = /obj/item/ammo_box/a762
 
 /datum/gang_item/weapon/uzi
 	name = "Uzi SMG"
@@ -315,17 +328,29 @@ datum/gang_item/clothing/shades //Addition: Why not have cool shades on a gang m
 	permeability_coefficient = 0.01
 	clothing_flags = NOSLIP
 
-datum/gang_item/equipment/shield
+/datum/gang_item/equipment/shield
 	name = "Riot Shield"
 	id = "riot_shield"
 	cost = 25
 	item_path = /obj/item/shield/riot
 
-datum/gang_item/equipment/gangsheild
+/datum/gang_item/equipment/gangsheild
 	name = "Tower Shield"
 	id = "metal"
 	cost = 45 //High block of melee and even higher for bullets
 	item_path = /obj/item/shield/riot/tower
+
+/datum/gang_item/equipment/illegal_stuff
+	name = "Box of Illegal Goods"
+	id = "illegal_stuff"
+	cost = 50
+	item_path = /obj/item/storage/box/illegal_stuff
+
+/datum/gang_item/equipment/funding
+	name = "Additional Funding (5000)"
+	id = "funding"
+	cost = 50
+	item_path = /obj/item/storage/secure/briefcase/syndie
 
 /datum/gang_item/equipment/pen
 	name = "Recruitment Pen"
