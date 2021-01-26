@@ -395,10 +395,10 @@ datum/gang_item/clothing/shades //Addition: Why not have cool shades on a gang m
 		return "Promote a Gangster"
 	return "Spare Gangtool"
 
-/datum/gang_item/equipment/dominator
+datum/gang_item/equipment/dominator
 	name = "Station Dominator"
 	id = "dominator"
-	cost = 30
+	cost = 250
 	item_path = /obj/machinery/dominator
 	spawn_msg = "<span class='notice'>The <b>dominator</b> will secure your gang's dominance over the station. Turn it on when you are ready to defend it.</span>"
 
