@@ -225,7 +225,7 @@ datum/gang_item/clothing/shades //Addition: Why not have cool shades on a gang m
 /datum/gang_item/weapon/tommy
 	name = "Black Market 9mm Tommy Gun"
 	id = "tommy"
-	cost = 75
+	cost = 60
 	item_path = /obj/item/gun/ballistic/automatic/tommygun
 
 /datum/gang_item/weapon/ammo/tommy_ammo
@@ -267,7 +267,7 @@ datum/gang_item/clothing/shades //Addition: Why not have cool shades on a gang m
 /datum/gang_item/weapon/machinegun
 	name = "Mounted Machine Gun"
 	id = "MG"
-	cost = 45
+	cost = 75
 	item_path = /obj/machinery/manned_turret
 	spawn_msg = "<span class='notice'>The mounted machine gun features enhanced responsiveness. Hold down on the trigger while firing to control where you're shooting.</span>"
 
